@@ -19,7 +19,7 @@ const placeholder = function(word) {
     const placeholderLetters = [];
     for (const letter of word) {
         console.log(letter);
-        placeholderLetter.push("●");
+        placeholderLetters.push("●");
     }
     wordInProgress.innerText = placeholderLetters.join("");
 };
@@ -91,6 +91,6 @@ const updateWordInProgress = function (guessedLetters) {
 const checkIfWin = function () {
     if (word.toUpperCase() === wordInProgress.innerText) {
         message.classList.add("win");
-        message.innerHTML = `<p class="highlight"> You guessed the correct word! Congrats!</p>`
+        message.innerHTML = `<p class="highlight">You guessed the correct word! Congrats!</p>`
     }
 };
